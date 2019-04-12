@@ -1,0 +1,53 @@
+<div class="mat-elevation-z8">
+
+  <table mat-table matSort [dataSource]="dataSource">
+
+    <tr mat-header-row *matHeaderRowDef="displayOrder"></tr>
+
+    <tr mat-row *matRowDef="let row; columns: displayOrder" (click)="onTouched(row)"></tr>
+
+    <ng-container matColumnDef="year">
+      <th mat-header-cell *matHeaderCellDef mat-sort-header="year"> Year </th>
+      <td mat-cell *matCellDef="let element"> {{element.year}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="model">
+      <th mat-header-cell *matHeaderCellDef> Model </th>
+      <td mat-cell *matCellDef="let element"> {{element.model}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="price">
+      <th mat-header-cell *matHeaderCellDef> Price </th>
+      <td mat-cell *matCellDef="let element"> {{element.price}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="mileage">
+      <th mat-header-cell *matHeaderCellDef> Mileage </th>
+      <td mat-cell *matCellDef="let element">
+        <mat-form-field>
+          <input matInput class="bordered editable" type="text" min="0" max="1000000" value="{{element.mileage}}" id="{{element.carid}}"
+                 (keyup)="__checkNumber($event)" (inputChanged)="onEdited($event)" >
+          <mat-hint><strong>Mileage</strong></mat-hint>
+        </mat-form-field>
+      </td>
+    </ng-container>
+
+    <ng-container matColumnDef="color">
+      <th mat-header-cell *matHeaderCellDef> Color </th>
+      <td mat-cell *matCellDef="let element"> {{element.color}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="transmission">
+      <th mat-header-cell *matHeaderCellDef> Transmission </th>
+      <td mat-cell *matCellDef="let element"> {{element.transmission}} </td>
+    </ng-container>
+
+  </table>
+
+  <!-- options should always be Fibonacci :) -->
+  <mat-paginator [length]="150" [pageSize]="5" [pageSizeOptions]="[5, 8, 13]" showFirstLastButtons (page)="onPage($event)"></mat-paginator>
+
+  <div align="right">
+    <button mat-button color="primary" (click)="onSave()">Save</button>
+  </div>
+</div>
