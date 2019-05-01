@@ -1,6 +1,6 @@
 # Editing Tabular Data In Angular
 
-This is the code base for the Medium article, _Editing Tabular Data Angular_ (insert url).
+This is the code base for the Medium article, [Editing Tabular Data Angular](https://medium.com/ngconf/editing-tabular-data-in-angular-ca7d4b86efb2).
 
  
 Author:  Jim Armstrong - [The Algorithmist](http://www.algorithmist.net)
