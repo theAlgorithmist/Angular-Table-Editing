@@ -3,7 +3,7 @@
 This is the code base for the Medium article, [Editing Tabular Data Angular](https://medium.com/ngconf/editing-tabular-data-in-angular-ca7d4b86efb2).
 
  
-Author:  Jim Armstrong - [The Algorithmist](http://www.algorithmist.net)
+Author:  Jim Armstrong - [The Algorithmist](https://www.linkedin.com/in/jimarmstrong)
 
 @algorithmist
 
